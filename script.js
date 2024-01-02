@@ -31,9 +31,9 @@ let firstNum = undefined;
 let operator = "";
 let secondNum = undefined;
 
-let clearState = false;
+let clearState = true;
 
-let displaySection = document.querySelector("div").querySelector("div");
+let displaySection = document.querySelector(".section-display").querySelector("div");
 
 const clearButton = document.querySelector(".clear");
 
