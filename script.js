@@ -8,6 +8,11 @@ function mul(numA, numB){
 	return numA * numB;
 }
 function div(numA, numB){
+	if (numB == 0){
+		alert("Divide by zero!");
+		clearButton.click();
+		return;
+	}
 	return numA / numB;
 }
 
@@ -29,6 +34,8 @@ let secondNum = undefined;
 let clearState = false;
 
 let displaySection = document.querySelector("div").querySelector("div");
+
+const clearButton = document.querySelector(".clear");
 
 let numberSection = document.querySelector(".numbers");
 let numberButtons = numberSection.querySelectorAll("button");
@@ -64,6 +71,11 @@ for (const button of opButtons){
 }
 
 document.querySelector(".equals").addEventListener("click", function(){
+	if (!firstNum || !operator || displaySection.textContent == ""){
+		alert("Invalid operation!");
+		clearButton.click();
+		return;
+	}
 	secondNum = Number(displaySection.textContent);
 	let result = operate(firstNum, secondNum, operator)
 	firstNum = undefined;
@@ -73,7 +85,7 @@ document.querySelector(".equals").addEventListener("click", function(){
 	operator = "";
 });
 
-document.querySelector(".clear").addEventListener("click", function(){
+clearButton.addEventListener("click", function(){
 	firstNum = undefined;
 	operator = "";
 	secondNum = undefined;
