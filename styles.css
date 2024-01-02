@@ -1,0 +1,21 @@
+.container{
+    background-color: lightgray;
+    width: 50%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.section-display{
+    background-color: red;
+    flex-grow: 1;
+}
+.section-numop{
+    background-color: green;
+    flex-grow: 3;
+    display: flex;
+}
+.section-equalclear{
+    background-color: purple;
+    flex-grow: 0.5;
+}
