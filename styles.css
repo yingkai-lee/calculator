@@ -23,12 +23,26 @@
     display: flex;
     flex-direction: column;
 }
-.numbers > button{
+.number-row{
+    flex-grow: 1;
+    display: flex;
+}
+.number-row > button{
+    flex-grow: 1;
 }
 .operators{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.operators > button{
     flex-grow: 1;
 }
 .section-equalclear{
     background-color: purple;
     flex-grow: 0.5;
+    display: flex;
+}
+.section-equalclear > button{
+    flex-grow: 1;
 }
