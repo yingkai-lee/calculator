@@ -7,7 +7,7 @@
     flex-direction: column;
 }
 .section-display{
-    background-color: red;
+    background-color: greenyellow;
     flex-grow: 1;
 }
 .section-display > div{
