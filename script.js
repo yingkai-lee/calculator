@@ -11,7 +11,7 @@ function div(numA, numB){
 	if (numB == 0){
 		alert("Divide by zero!");
 		clearButton.click();
-		return;
+		return "Enter";
 	}
 	return numA / numB;
 }
@@ -71,7 +71,7 @@ for (const button of opButtons){
 }
 
 document.querySelector(".equals").addEventListener("click", function(){
-	if (!firstNum || !operator || displaySection.textContent == ""){
+	if (!firstNum || !operator || displaySection.textContent == "Enter"){
 		alert("Invalid operation!");
 		clearButton.click();
 		return;
@@ -89,5 +89,5 @@ clearButton.addEventListener("click", function(){
 	firstNum = undefined;
 	operator = "";
 	secondNum = undefined;
-	displaySection.textContent = "";
+	displaySection.textContent = "Enter";
 });

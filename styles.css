@@ -12,6 +12,8 @@
 }
 .section-display > div{
     text-align: center;
+    height: 100%;
+    font-size: 80px;
 }
 .section-numop{
     background-color: green;
